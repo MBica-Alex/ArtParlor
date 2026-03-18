@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Bica Mihai-Alexandru">
@@ -10,7 +9,6 @@
     <meta name="keywords"
         content="desen, pictură, sculptură, acuarele, creioane, papetărie, pensule, paletă, culori, cărbune, grafit, linere, markere, pânză">
     <title>ArtParlor - Magazin de materiale artistice</title>
-
     <link rel="icon" type="image/png" href="Resurse/Imagini/Favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="Resurse/Imagini/Favicon/favicon.svg" />
     <link rel="shortcut icon" href="Resurse/Imagini/Favicon/favicon.ico" />
@@ -18,10 +16,8 @@
     <meta name="apple-mobile-web-app-title" content="ArtParlor" />
     <link rel="manifest" href="Resurse/Imagini/Favicon/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#00ffe5">
-
     <link rel="stylesheet" href="./Resurse/CSS/general.css" type="text/css" />
 </head>
-
 <body id="top">
     <header>
         <h1>ArtParlor</h1>
@@ -56,20 +52,15 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <div id="grid-pagina">
-
-            <section id="welcome">
+            <section id="welcome" class="zona1 z-pattern">
                 <hgroup>
                     <h2>Bun venit la ArtParlor!</h2>
                     <p class="subtitlu">Magazinul tău de materiale artistice</p>
                 </hgroup>
-
                 <p class="intro"><q>Arta spală sufletul de praful vieții de zi cu zi.</q> – <cite>Pablo Picasso</cite>.
-                    Descoperă
-                    instrumentele perfecte pentru creativitatea ta.</p>
-
+                    Descoperă instrumentele perfecte pentru creativitatea ta.</p>
                 <div class="intro-oferte">
                     <div>Pensule</div>
                     <div>Creioane</div>
@@ -77,10 +68,8 @@
                     <div>Papetărie</div>
                     <div>Sculptură</div>
                 </div>
-
                 <p class="anunt intro">De la <dfn>grafit</dfn> (o formă cristalină de carbon folosită în creioane) până
                     la culori în ulei, avem tot ce îți trebuie!</p>
-
                 <div id="dv-prezentare-1">
                     <div id="dv-prezentare">
                         <figure>
@@ -94,323 +83,347 @@
                             <figcaption style="text-align: center;">Paleta artistului - Interactivă</figcaption>
                         </figure>
                         <map name="harta-paleta">
-                            <area shape="circle" coords="150,150,50" href="#pictura" alt="Spre Pictură" title="Vezi produse pentru pictură">
-                            
-                            <area shape="rect" coords="300,50,450,200" href="#desen" alt="Spre Desen" title="Vezi produse pentru desen">
-                            
-                            <area shape="circle" coords="550,300,60" href="#sculptura" alt="Spre Sculptură" title="Vezi produse pentru sculptură">
+                            <area shape="circle" coords="150,150,50" href="#pictura" alt="Spre Pictură"
+                                title="Vezi produse pentru pictură">
+                            <area shape="rect" coords="300,50,450,200" href="#desen" alt="Spre Desen"
+                                title="Vezi produse pentru desen">
+                            <area shape="circle" coords="550,300,60" href="#sculptura" alt="Spre Sculptură"
+                                title="Vezi produse pentru sculptură">
                         </map>
                     </div>
                 </div>
-
                 <hr class="separator-arta" />
-
                 <p>Află mai multe despre istoria culorilor vizitând:
                     <a href="https://en.wikipedia.org/wiki/History_of_art" target="_blank">
                         https://en.wikipedia.org/wiki/History_of_art#<wbr>Renaissance_<wbr>and_<wbr>Baroque
                     </a>
                 </p>
-
             </section>
-
-            <section id="promotii">
-                <h2>Promoții și oferte din catalog</h2>
-                <article>
-                    <h3 class="titlu">Super ofertă de weekend</h3>
-                    <p><b>ArtParlor</b> oferă reduceri la seturile de <i lang="en">fine art</i>! Preț vechi: <s>200
-                            RON</s>, Preț nou: <b><ins>150 RON</ins></b> pentru trusele de pictură.</p>
-                            <div style="margin: 15px 0;">
-                    <p>Calculul economiei tale:</p>
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                        <mrow>
-                            <mtext>Reducere</mtext>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mn>200</mn>
-                                    <mo>-</mo>
-                                    <mn>150</mn>
-                                </mrow>
-                                <mn>200</mn>
-                            </mfrac>
-                            <mo>×</mo>
-                            <mn>100</mn>
-                            <mo>=</mo>
-                            <mn>25</mn>
-                            <mo>%</mo>
-                        </mrow>
-                    </math>
-                </div>
-                    <p>Oferta este valabilă în limita stocului disponibil în toate magazinele cu sigla <abbr
-                            title="Art Parlor Autorizat">APA</abbr>.</p>
-
-                    <p>Stadiu epuizare stoc promoțional: <meter value="90" min="0" max="100" low="30" high="80"
-                            optimum="10">90%</meter> (Aproape epuizat!)</p>
-                </article>
-
-                <article>
-                    <h3>Pachetul Începătorului</h3>
-                    <p>Pachetul ideal pentru cei ce descoperă desenul conține:</p>
-                    <ol>
-                        <li>Bloc de desen A4 cu hârtie texturată</li>
-                        <li>Set de creioane <i lang="fr">papier</i> de diferite durități</li>
-                        <li><b>Markere</b> pe bază de alcool</li>
-                        <li>O radieră maleabilă</li>
-                    </ol>
-                </article>
+            <section id="calendar" class="zona3" style="border: 1px dashed var(--culoare-border); padding: 10px;">
+                <h2>Calendar Evenimente</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
-
-            <section id="produse">
-                <h2>Produsele noastre</h2>
-                <p>Vă oferim o multitudine de instrumente prin care să vă exprimați viziunea artistică.</p>
-
-                <section id="pictura">
-                    <h3>Pictură</h3>
-                    <p>Secțiunea dedicată artiștilor care iubesc culoarea fluida.</p>
-                    <dl>
-                        <dt>Acuarele</dt>
-                        <dd>Culori pe bază de apă, transparente și delicate.</dd>
-                        <dt>Pensule</dt>
-                        <dd>Din păr natural sau sintetic, esențiale pentru orice tehnică.</dd>
-                        <dt>Pânză</dt>
-                        <dd>Suport texturat, tratat special pentru culori acrilice sau ulei.</dd>
-                    </dl>
-                </section>
-
-                <section id="desen">
-                    <h3>Desen</h3>
-                    <p>Pentru schițe rapide sau opere hiperrealiste.</p>
-                    <ul>
-                        <li>Creioane grafit și cărbune</li>
-                        <li>Markere și linere</li>
-                        <li>Blocuri de desen</li>
-                    </ul>
-                    <div style="margin-top: 15px; padding: 10px; border-radius: 5px;">
-                        <p><strong>Sfat de compoziție:</strong> Folosește <em>Secțiunea de Aur</em> pentru un echilibru perfect:</p>
-                        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                            <mrow>
-                                <mi>φ</mi>
-                                <mo>=</mo>
-                                <mfrac>
-                                    <mrow>
-                                        <mn>1</mn>
-                                        <mo>+</mo>
-                                        <msqrt>
-                                            <mn>5</mn>
-                                        </msqrt>
-                                    </mrow>
-                                    <mn>2</mn>
-                                </mfrac>
-                                <mo>≈</mo>
-                                <mn>1.618</mn>
-                            </mrow>
-                        </math>
-                    </div>
-                </section>
-
-                <section id="sculptura">
-                    <h3>Sculptură</h3>
-                    <p>Modelează-ți ideile în 3D.</p>
-                    <p>Avem lut de cea mai bună calitate. <strong>Atenție!</strong> Anumite tipuri de argilă trebuie
-                        <em>neapărat</em> arse la cuptor pentru a se întări.
-                    </p>
-                    <ul>
-                        <li>Lut cu uscare la aer</li>
-                        <li>Argilă polimerică</li>
-                        <li>Instrumente de modelaj</li>
-                    </ul>
-                </section>
-            </section>
-
-            <section id="evenimente">
-                <h2>Evenimente și Ateliere</h2>
-                <ul>
-                    <li>
-                        <b>Atelier de pictură în acuarelă</b>
-                        <time datetime="2026-04-15T14:00">15 aprilie, ora 14:00</time> - Învățăm tehnicile de bază umed
-                        pe umed, materiale incluse. Participare gratuită în limita locurilor.
-                    </li>
-                    <li>
-                        <b>Sesiune de portret cu model live</b>
-                        <time datetime="2026-04-20T18:00">20 aprilie, ora 18:00</time> - Adu-ți creioanele sau cărbunele
-                        preferat. Vom avea un model profesionist timp de 3 ore.
-                    </li>
-                    <li>
-                        <b>Lansarea noii colecții de pensule</b>
-                        <time datetime="2026-05-01T10:00">1 mai, ora 10:00</time> - Oferim primilor 50 de vizitatori
-                        câte un liner gratis și o demonstrație a noilor produse.
-                    </li>
-                </ul>
-            </section>
-
-            <section id="orar">
+            <section id="orar" class="zona2">
                 <h2>Orar Magazin Fizic</h2>
-                <table id="tab-orar">
-                    <caption>Programul de lucru ArtParlor pentru public</caption>
-                    <thead>
-                        <tr>
-                            <th>Cod</th>
-                            <th>Perioadă</th>
-                            <th>Zi</th>
-                            <th>Interval dimineață</th>
-                            <th>Pauză de masă</th>
-                            <th>Interval seară</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td rowspan="5">Zile<br />Lucrătoare</td>
-                            <td>Luni</td>
-                            <td>10-12</td>
-                            <td>12-14</td>
-                            <td>14-20</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Marți</td>
-                            <td>9-12</td>
-                            <td>12-14</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Miercuri</td>
-                            <td>9-11</td>
-                            <td>11-13</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Joi</td>
-                            <td>9-11</td>
-                            <td>11-13</td>
-                            <td>14-21</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Vineri</td>
-                            <td>9-12</td>
-                            <td>12-14</td>
-                            <td>14-19</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td rowspan="2">Weekend</td>
-                            <td>Sâmbătă</td>
-                            <td>10-12</td>
-                            <td>12-13</td>
-                            <td>13-16</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Duminică</td>
-                            <td>10-14</td>
-                            <td>-</td>
-                            <td>închis</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">Închis cu ocazia sărbătorilor legale.</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="table-container">
+                    <table id="tab-orar">
+                        <caption>Programul de lucru ArtParlor pentru public</caption>
+                        <thead>
+                            <tr>
+                                <th>Cod</th>
+                                <th>Perioadă</th>
+                                <th>Zi</th>
+                                <th>Interval dimineață</th>
+                                <th>Pauză de masă</th>
+                                <th>Interval seară</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td rowspan="5">Zile<br />Lucrătoare</td>
+                                <td>Luni</td>
+                                <td>10-12</td>
+                                <td>12-14</td>
+                                <td>14-20</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Marți</td>
+                                <td>9-12</td>
+                                <td>12-14</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Miercuri</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Joi</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Vineri</td>
+                                <td>9-12</td>
+                                <td>12-14</td>
+                                <td>14-19</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td rowspan="2">Weekend</td>
+                                <td>Sâmbătă</td>
+                                <td>10-12</td>
+                                <td>12-13</td>
+                                <td>13-16</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Duminică</td>
+                                <td>10-14</td>
+                                <td>-</td>
+                                <td>închis</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">Închis cu ocazia sărbătorilor legale.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
                 <p><strong>Atenție!!!</strong> În prima zi a lunii facem inventar.</p>
             </section>
-
-            <section id="index-intrebari">
-                <h2>Întrebări frecvente (FAQ)</h2>
-                <details>
-                    <summary>Ce metode de plată acceptați pentru comenzile online?</summary>
-                    <p>Acceptăm plata cu cardul (Visa, Mastercard), transfer bancar sau plata ramburs la curier.</p>
-                </details>
-                <details>
-                    <summary>Cât durează livrarea?</summary>
-                    <p>În general, expediem comenzile în 24-48 de ore. Livrarea prin curier durează 1-2 zile lucrătoare.
-                    </p>
-                </details>
-                <details>
-                    <summary>Vopselele acrilice se pot folosi pe sticlă?</summary>
-                    <p>Da, însă recomandăm utilizarea unui primer (grund) înainte, pentru o aderență optimă.</p>
-                </details>
-                <details>
-                    <summary>Oferiți reduceri pentru studenții la Arte?</summary>
-                    <p>Da! Pe baza carnetului de student vizat, oferim o reducere permanentă de 10%.</p>
-                </details>
+            <section id="anunturi" class="zona4" style="border: 1px dashed var(--culoare-border); padding: 10px;">
+                <h2>Anunțuri</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
-
-        </div>
-
-        <section id="galerie-statica">
-            <h2>Galerie Produse</h2>
-            <div id="grid-galerie">
-                <figure>
-                    <img src="Resurse/Imagini/acuarele.png" alt="Acuarele"
-                        style="width: 400px; height: 400px; object-fit: contain;">
-                    <figcaption>Set Acuarele Profesionale</figcaption>
-                </figure>
-                <figure>
-                    <img src="Resurse/Imagini/set-creioane.png" alt="Creioane grafit"
-                        style="width: 400px; height: 400px; object-fit: contain;">
-                    <figcaption>Set Creioane Grafit</figcaption>
-                </figure>
-                <figure>
-                    <img src="Resurse/Imagini/sevalet.png" alt="Șevalet lemn"
-                        style="width: 400px; height: 400px; object-fit: contain;">
-                    <figcaption>Șevalet de studio</figcaption>
-                </figure>
-            </div>
-
-            <p>Capacitate server galerie: <meter value="12" min="0" max="100" low="30" high="80"
-                    optimum="10">12%</meter> (Optim)</p>
-            <div style="margin-top: 20px;">
-                <object data="Resurse/Fisiere/catalog_artparlor_2026.pdf" type="application/pdf" width="100%"
-                    height="500px">
-                    <p>Browserul tău nu suportă vizualizarea PDF-ului direct în pagină.
-                        Îl poți vizualiza aici: <a href="Resurse/Fisiere/catalog_artparlor_2026.pdf">Deschide Catalog
-                            PDF</a>.
+            <div id="diverse" class="zona8" style="display:flex; flex-direction:column; gap:20px;">
+                <section id="promotii">
+                    <h2>Promoții și oferte din catalog</h2>
+                    <article>
+                        <h3 class="titlu">Super ofertă de weekend</h3>
+                        <p><b>ArtParlor</b> oferă reduceri la seturile de <i lang="en">fine art</i>! Preț vechi: <s>200
+                                RON</s>, Preț nou: <b><ins>150 RON</ins></b> pentru trusele de pictură.</p>
+                        <div style="margin: 15px 0;">
+                            <p>Calculul economiei tale:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <mtext>Reducere</mtext>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mn>200</mn>
+                                            <mo>-</mo>
+                                            <mn>150</mn>
+                                        </mrow>
+                                        <mn>200</mn>
+                                    </mfrac>
+                                    <mo>×</mo>
+                                    <mn>100</mn>
+                                    <mo>=</mo>
+                                    <mn>25</mn>
+                                    <mo>%</mo>
+                                </mrow>
+                            </math>
+                        </div>
+                        <p>Oferta este valabilă în limita stocului disponibil în toate magazinele cu sigla <abbr
+                                title="Art Parlor Autorizat">APA</abbr>.</p>
+                        <p>Stadiu epuizare stoc promoțional: <meter value="90" min="0" max="100" low="30" high="80"
+                                optimum="10">90%</meter> (Aproape epuizat!)</p>
+                    </article>
+                    <article>
+                        <h3>Pachetul Începătorului</h3>
+                        <p>Pachetul ideal pentru cei ce descoperă desenul conține:</p>
+                        <ol>
+                            <li>Bloc de desen A4 cu hârtie texturată</li>
+                            <li>Set de creioane <i lang="fr">papier</i> de diferite durități</li>
+                            <li><b>Markere</b> pe bază de alcool</li>
+                            <li>O radieră maleabilă</li>
+                        </ol>
+                    </article>
+                </section>
+                <section id="produse">
+                    <h2>Produsele noastre</h2>
+                    <p>Vă oferim o multitudine de instrumente prin care să vă exprimați viziunea artistică.</p>
+                    <section id="pictura">
+                        <h3>Pictură</h3>
+                        <p>Secțiunea dedicată artiștilor care iubesc culoarea fluida.</p>
+                        <dl>
+                            <dt>Acuarele</dt>
+                            <dd>Culori pe bază de apă, transparente și delicate.</dd>
+                            <dt>Pensule</dt>
+                            <dd>Din păr natural sau sintetic, esențiale pentru orice tehnică.</dd>
+                            <dt>Pânză</dt>
+                            <dd>Suport texturat, tratat special pentru culori acrilice sau ulei.</dd>
+                        </dl>
+                    </section>
+                    <section id="desen">
+                        <h3>Desen</h3>
+                        <p>Pentru schițe rapide sau opere hiperrealiste.</p>
+                        <ul>
+                            <li>Creioane grafit și cărbune</li>
+                            <li>Markere și linere</li>
+                            <li>Blocuri de desen</li>
+                        </ul>
+                        <div style="margin-top: 15px; padding: 10px; border-radius: 5px;">
+                            <p><strong>Sfat de compoziție:</strong> Folosește <em>Secțiunea de Aur</em> pentru un
+                                echilibru perfect:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <mi>φ</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>+</mo>
+                                            <msqrt>
+                                                <mn>5</mn>
+                                            </msqrt>
+                                        </mrow>
+                                        <mn>2</mn>
+                                    </mfrac>
+                                    <mo>≈</mo>
+                                    <mn>1.618</mn>
+                                </mrow>
+                            </math>
+                        </div>
+                    </section>
+                    <section id="sculptura">
+                        <h3>Sculptură</h3>
+                        <p>Modelează-ți ideile în 3D.</p>
+                        <p>Avem lut de cea mai bună calitate. <strong>Atenție!</strong> Anumite tipuri de argilă trebuie
+                            <em>neapărat</em> arse la cuptor pentru a se întări.
+                        </p>
+                        <ul>
+                            <li>Lut cu uscare la aer</li>
+                            <li>Argilă polimerică</li>
+                            <li>Instrumente de modelaj</li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="evenimente">
+                    <h2>Evenimente și Ateliere</h2>
+                    <ul>
+                        <li>
+                            <b>Atelier de pictură în acuarelă</b>
+                            <time datetime="2026-04-15T14:00">15 aprilie, ora 14:00</time> - Învățăm tehnicile de bază
+                            umed
+                            pe umed, materiale incluse. Participare gratuită în limita locurilor.
+                        </li>
+                        <li>
+                            <b>Sesiune de portret cu model live</b>
+                            <time datetime="2026-04-20T18:00">20 aprilie, ora 18:00</time> - Adu-ți creioanele sau
+                            cărbunele
+                            preferat. Vom avea un model profesionist timp de 3 ore.
+                        </li>
+                        <li>
+                            <b>Lansarea noii colecții de pensule</b>
+                            <time datetime="2026-05-01T10:00">1 mai, ora 10:00</time> - Oferim primilor 50 de vizitatori
+                            câte un liner gratis și o demonstrație a noilor produse.
+                        </li>
+                    </ul>
+                </section>
+                <section id="index-intrebari">
+                    <h2>Întrebări frecvente (FAQ)</h2>
+                    <details>
+                        <summary>Ce metode de plată acceptați pentru comenzile online?</summary>
+                        <p>Acceptăm plata cu cardul (Visa, Mastercard), transfer bancar sau plata ramburs la curier.</p>
+                    </details>
+                    <details>
+                        <summary>Cât durează livrarea?</summary>
+                        <p>În general, expediem comenzile în 24-48 de ore. Livrarea prin curier durează 1-2 zile
+                            lucrătoare.</p>
+                    </details>
+                    <details>
+                        <summary>Vopselele acrilice se pot folosi pe sticlă?</summary>
+                        <p>Da, însă recomandăm utilizarea unui primer (grund) înainte, pentru o aderență optimă.</p>
+                    </details>
+                    <details>
+                        <summary>Oferiți reduceri pentru studenții la Arte?</summary>
+                        <p>Da! Pe baza carnetului de student vizat, oferim o reducere permanentă de 10%.</p>
+                    </details>
+                </section>
+                <section id="galerie-statica">
+                    <h2>Galerie Produse</h2>
+                    <div id="grid-galerie">
+                        <figure>
+                            <img src="Resurse/Imagini/acuarele.png" alt="Acuarele"
+                                style="width: 400px; height: 400px; object-fit: contain;">
+                            <figcaption>Set Acuarele Profesionale</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Resurse/Imagini/set-creioane.png" alt="Creioane grafit"
+                                style="width: 400px; height: 400px; object-fit: contain;">
+                            <figcaption>Set Creioane Grafit</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Resurse/Imagini/sevalet.png" alt="Șevalet lemn"
+                                style="width: 400px; height: 400px; object-fit: contain;">
+                            <figcaption>Șevalet de studio</figcaption>
+                        </figure>
+                    </div>
+                    <p>Capacitate server galerie: <meter value="12" min="0" max="100" low="30" high="80"
+                            optimum="10">12%</meter> (Optim)</p>
+                    <div style="margin-top: 20px;">
+                        <object data="Resurse/Fisiere/catalog_artparlor_2026.pdf" type="application/pdf" width="100%"
+                            height="500px">
+                            <p>Browserul tău nu suportă vizualizarea PDF-ului direct în pagină.
+                                Îl poți vizualiza aici: <a href="Resurse/Fisiere/catalog_artparlor_2026.pdf">Deschide
+                                    Catalog PDF</a>.
+                            </p>
+                        </object>
+                    </div>
+                    <p style="margin-top: 20px;">
+                        <a href="Resurse/Fisiere/catalog_artparlor_2026.pdf"
+                            download="Catalog_Produse_ArtParlor.pdf">Descarcă Catalogul nostru complet (PDF)</a>
                     </p>
-                </object>
+                </section>
+                <section id="tutoriale">
+                    <h2>Tutoriale și Inspirație</h2>
+                    <p>Dacă doriți să învățați tehnici noi, vă recomandăm tutorialele video de mai jos. De asemenea,
+                        puteți găsi surse de inspirație incredibile vizitând portofoliile artiștilor de pe <a
+                            href="https://www.behance.net" target="_blank">Behance</a>, unde sunt expuse lucrări
+                        realizate în diverse medii artistice.</p>
+                    <div class="container-iframe">
+                        <div class="taburi-iframe">
+                            <a href="https://www.youtube.com/embed/1s58rW0_LN4" target="ifr-video">Cum să pictezi un
+                                peisaj</a>
+                            <a href="https://www.youtube.com/embed/2szSyXx8cZQ" target="ifr-video">Tehnici de bază în
+                                desen</a>
+                            <a href="https://www.youtube.com/embed/1WyT5gbpPiw" target="ifr-video">Modelaj în lut pentru
+                                începători</a>
+                        </div>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/1s58rW0_LN4?autoplay=1&mute=1&loop=1&playlist=1s58rW0_LN4,2szSyXx8cZQ,1WyT5gbpPiw"
+                            name="ifr-video" title="YouTube playlist tutoriale" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
             </div>
-
-            <p style="margin-top: 20px;">
-                <a href="Resurse/Fisiere/catalog_artparlor_2026.pdf" download="Catalog_Produse_ArtParlor.pdf">Descarcă
-                    Catalogul nostru complet (PDF)</a>
-            </p>
-        </section>
-
-        <section id="tutoriale">
-            <h2>Tutoriale și Inspirație</h2>
-            <p>Dacă doriți să învățați tehnici noi, vă recomandăm tutorialele video de mai jos. De asemenea, puteți găsi
-                surse de inspirație incredibile vizitând portofoliile artiștilor de pe <a href="https://www.behance.net"
-                    target="_blank">
-                    Behance</a>, unde sunt expuse lucrări realizate în diverse medii artistice.</p>
-            <div class="container-iframe">
-                <div class="taburi-iframe">
-                    <a href="https://www.youtube.com/embed/1s58rW0_LN4" target="ifr-video">Cum să pictezi un peisaj</a>
-                    <a href="https://www.youtube.com/embed/2szSyXx8cZQ" target="ifr-video">Tehnici de bază în desen</a>
-                    <a href="https://www.youtube.com/embed/1WyT5gbpPiw" target="ifr-video">Modelaj în lut pentru
-                        începători</a><br />
-                </div>
-
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/1s58rW0_LN4?autoplay=1&mute=1&loop=1&playlist=1s58rW0_LN4,2szSyXx8cZQ,1WyT5gbpPiw"
-                    name="ifr-video" title="YouTube playlist tutoriale" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-        </section>
-
+            <section id="date-server" class="zona7" style="border: 1px dashed var(--culoare-border); padding: 10px;">
+                <h2>Date Site / Server</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur.</p>
+            </section>
+            <section id="utilizatori-online" class="zona5"
+                style="border: 1px dashed var(--culoare-border); padding: 10px;">
+                <h2>Utilizatori Online</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </section>
+            <section id="date-utilizator" class="zona6"
+                style="border: 1px dashed var(--culoare-border); padding: 10px;">
+                <h2>Date Utilizator / Statistici</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </section>
+        </div>
     </main>
-
     <footer id="contact">
-        <a href="#top" title="mergi sus" id="link-top">
+        <a href="#top" title="Înapoi spre antetul paginii web" id="link-top">
             <span id="triunghi">Începutul paginii</span>
         </a>
-
         <address style="margin-top: 20px; font-style: normal;">
             <strong>Informații de contact ArtParlor:</strong><br>
             Telefon: <a href="tel:+40712345678">0712 345 678</a><br>
@@ -418,8 +431,7 @@
             Adresă: <a
                 href="https://www.google.com/maps/search/?api=1&query=Facultatea+de+Matematica+si+Informatica+Bucuresti"
                 target="_blank">
-                Strada Creativității Nr. 42,<br>
-                Sector 1, București
+                Strada Creativității Nr. 42,<br>Sector 1, București
             </a><br>
             <a href="https://wa.me/40712345678" target="_blank">Contactează-ne pe WhatsApp</a>
             <div style="margin-top: 15px;">
@@ -431,9 +443,7 @@
                 </iframe>
             </div>
         </address>
-
         <p><small>Copyright &copy; ArtParlor <time datetime="2026-03-09">9 martie 2026</time></small></p>
     </footer>
 </body>
-
 </html>
