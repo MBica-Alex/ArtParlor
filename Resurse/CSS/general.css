@@ -17,6 +17,10 @@ body {
     background-color: var(--culoare-fundal);
     color: var(--culoare-text);
 
+    font-family: "Akaya Telivigala", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
     padding-left: var(--margine-pagina);
     padding-right: var(--margine-pagina);
     box-sizing: border-box;
