@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./Resurse/CSS/reset.css" type="text/css" />
     <link rel="stylesheet" href="./Resurse/CSS/general.css" type="text/css" />
+    <link rel="stylesheet" href="./Resurse/CSS/meniu.css" type="text/css" />
 </head>
 
 <body id="top">
@@ -32,30 +33,38 @@
             <img src="Resurse/Imagini/sigla.png" alt="sigla ArtParlor" title="Click pentru a mări sigla"
                 style="width:150px;" />
         </a>
-        <nav>
+        <input type="checkbox" id="burger-checkbox">
+        <label for="burger-checkbox" id="burger-meniu"><i class="fa-solid fa-bars"></i></label>
+        <nav id="meniu-top">
             <ul>
-                <li>Acasă
+                <li><a href="#"><i class="fa-solid fa-house"></i> <span class="nav-text">Acasă</span></a>
                     <ul>
                         <li><a href="#welcome">Bine ați venit</a></li>
                         <li><a href="#promotii">Promoții</a></li>
                     </ul>
                 </li>
-                <li>Coș de cumpărături</li>
-                <li>Produse
+                <li><a href="#"><i class="fa-solid fa-paintbrush"></i> <span class="nav-text">Produse</span></a>
                     <ul>
                         <li><a href="#pictura">Pictură</a></li>
                         <li><a href="#desen">Desen</a></li>
                         <li><a href="#sculptura">Sculptură</a></li>
-                        <li>Diverse</li>
+                        <li><a href="#diverse">Diverse</a></li>
                     </ul>
                 </li>
-                <li>Înregistrare
+                <li><a href="#"><i class="fa-solid fa-images"></i> <span class="nav-text">Galerii</span></a>
                     <ul>
-                        <li>Înregistrare</li>
-                        <li>Autentificare</li>
+                        <li><a href="galerie_statica.html">Galerie Statică</a></li>
+                        <li><a href="galerie_dinamica.html">Galerie Dinamică</a></li>
+                        <li><a href="expozitii.html">Expoziții Viitoare</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> <span class="nav-text">Contul Meu</span></a>
+                    <ul>
+                        <li><a href="#">Înregistrare</a></li>
+                        <li><a href="#">Log In</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> <span class="nav-text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
@@ -411,6 +420,7 @@
         </div>
     </main>
     <footer id="contact">
+        <p id="banner-scolar">Acesta este un proiect școlar!</p>
         <a href="#top" title="Înapoi spre antetul paginii web" id="link-top">
             <span id="triunghi">Începutul paginii</span>
         </a>

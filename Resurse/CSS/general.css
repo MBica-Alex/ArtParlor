@@ -229,11 +229,11 @@ h4 {
 #grid-pagina {
     display: grid;
     grid-template-areas:
-        "zona1 zona1 zona1"
-        "zona3 zona2 zona4"
-        "zona8 zona8 zona8"
-        "zona7 zona5 zona6";
-    grid-template-columns: 1.2fr 1.6fr 1.2fr;
+        "zona1 zona1 zona1 zona1"
+        "zona3 zona2 zona2 zona4"
+        "zona8 zona8 zona8 zona8"
+        "zona7 zona7 zona5 zona6";
+    grid-template-columns: 2fr 4fr 2fr 2fr;
 
     gap: var(--grid-gap);
 }
@@ -601,4 +601,124 @@ table#tab-orar td:first-child {
     margin: 0;
     position: relative;
     z-index: 1;
+}
+
+
+@media print {
+    
+    @page :left {
+        margin-left: 2.5cm;
+        margin-right: 0.5cm;
+    }
+
+    @page :right {
+        margin-left: 0.5cm;
+        margin-right: 2.5cm;
+    }
+
+    body {
+        position: relative;
+    }
+
+    
+    #banner-scolar {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        border: 2px dotted black;
+        text-align: center;
+        display: block !important;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    
+    img, picture, video, iframe, object, audio, canvas, svg, 
+    map, area, figure, figcaption, #dv-prezentare, #grid-galerie, #link-top {
+        display: none !important;
+    }
+
+    
+    #grid-pagina {
+        display: block !important;
+    }
+    
+    #grid-pagina > * {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
+    
+    a, a:link, a:visited, a:hover, a:active {
+        text-decoration: none !important;
+        color: black !important;
+    }
+
+    
+    header nav {
+        display: none !important;
+    }
+
+    header {
+        height: 100vh;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        break-after: page;
+        page-break-after: always;
+        
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    header h1 {
+        
+        font-size: 2.5rem !important; 
+        text-decoration: underline !important;
+        color: black !important;
+        text-align: center;
+        margin: 0 !important;
+    }
+
+    
+    header h1 i {
+        display: none !important;
+    }
+
+    
+    footer {
+        break-before: page;
+        page-break-before: always;
+        background: transparent !important;
+        color: black !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    
+    body::after {
+        content: "Bica Mihai-Alexandru";
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 100px;
+        height: 2cm;
+        border: 3px double black;
+        opacity: 0.65;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        color: black;
+        background: transparent;
+        pointer-events: none;
+    }
 }
