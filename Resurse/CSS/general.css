@@ -6,7 +6,7 @@ body {
 
     --culoare-text: #004D4D;
 
-    --culoare-border: #008040;
+    --culoare-border: #096999;
 
     --culoare-highlight: #FF7F50;
 
@@ -605,7 +605,7 @@ table#tab-orar td:first-child {
 
 
 @media print {
-    
+
     @page :left {
         margin-left: 2.5cm;
         margin-right: 0.5cm;
@@ -620,7 +620,7 @@ table#tab-orar td:first-child {
         position: relative;
     }
 
-    
+
     #banner-scolar {
         position: absolute;
         top: 0;
@@ -633,30 +633,47 @@ table#tab-orar td:first-child {
         padding: 10px;
     }
 
-    
-    img, picture, video, iframe, object, audio, canvas, svg, 
-    map, area, figure, figcaption, #dv-prezentare, #grid-galerie, #link-top {
+
+    img,
+    picture,
+    video,
+    iframe,
+    object,
+    audio,
+    canvas,
+    svg,
+    map,
+    area,
+    figure,
+    figcaption,
+    #dv-prezentare,
+    #grid-galerie,
+    #link-top {
         display: none !important;
     }
 
-    
+
     #grid-pagina {
         display: block !important;
     }
-    
-    #grid-pagina > * {
+
+    #grid-pagina>* {
         page-break-inside: avoid;
         break-inside: avoid;
         margin-bottom: 20px;
     }
 
-    
-    a, a:link, a:visited, a:hover, a:active {
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
         text-decoration: none !important;
         color: black !important;
     }
 
-    
+
     header nav {
         display: none !important;
     }
@@ -669,7 +686,7 @@ table#tab-orar td:first-child {
         align-items: center;
         break-after: page;
         page-break-after: always;
-        
+
         margin: 0 !important;
         padding: 0 !important;
         border: none !important;
@@ -678,20 +695,20 @@ table#tab-orar td:first-child {
     }
 
     header h1 {
-        
-        font-size: 2.5rem !important; 
+
+        font-size: 2.5rem !important;
         text-decoration: underline !important;
         color: black !important;
         text-align: center;
         margin: 0 !important;
     }
 
-    
+
     header h1 i {
         display: none !important;
     }
 
-    
+
     footer {
         break-before: page;
         page-break-before: always;
@@ -701,7 +718,7 @@ table#tab-orar td:first-child {
         box-shadow: none !important;
     }
 
-    
+
     body::after {
         content: "Bica Mihai-Alexandru";
         position: fixed;

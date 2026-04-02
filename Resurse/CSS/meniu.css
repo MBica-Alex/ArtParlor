@@ -3,7 +3,7 @@ body {
   --meniu-bg: #1a1a1a;
   --meniu-text: #ffffff;
   --meniu-hover-bg: #404040;
-  --meniu-hover-shadow: inset 0 -4px 15px rgba(255, 255, 255, 0.4);
+  --meniu-hover-shadow: inset 0 -4px 5px rgba(255, 255, 255, 0.5);
   --meniu-text-hover: #00ffe5;
   --meniu-sub-bg: #000000;
 }
@@ -26,11 +26,31 @@ body {
 
 #burger-meniu {
   display: none;
-  font-size: 2.5rem;
-  color: white;
   cursor: pointer;
   padding: 10px;
   margin-right: auto;
+}
+#burger-meniu #hamburger-icon {
+  position: relative;
+  width: 35px;
+  height: 26px;
+}
+#burger-meniu #hamburger-icon span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--meniu-text);
+  border-radius: 2px;
+  left: 0;
+}
+#burger-meniu #hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+#burger-meniu #hamburger-icon span:nth-child(2) {
+  top: 11px;
+}
+#burger-meniu #hamburger-icon span:nth-child(3) {
+  top: 22px;
 }
 
 header {
@@ -117,6 +137,35 @@ header {
   #burger-meniu {
     display: block;
   }
+  #burger-meniu #hamburger-icon span {
+    animation: hamburgerAppear 1s ease both !important;
+  }
+  #burger-meniu #hamburger-icon span:nth-child(1) {
+    animation-delay: 0.3s !important;
+  }
+  #burger-meniu #hamburger-icon span:nth-child(2) {
+    animation-delay: 0.6s !important;
+  }
+  #burger-meniu #hamburger-icon span:nth-child(3) {
+    animation-delay: 0.9s !important;
+  }
+  @keyframes hamburgerAppear {
+    0% {
+      opacity: 0;
+      background-color: red;
+      transform: scale(0.5) rotate(-45deg);
+    }
+    50% {
+      opacity: 0.5;
+      background-color: var(--meniu-text-hover);
+      transform: scale(1.2) rotate(15deg);
+    }
+    100% {
+      opacity: 1;
+      background-color: var(--meniu-text);
+      transform: scale(1) rotate(0deg);
+    }
+  }
   #meniu-top {
     display: none;
     position: absolute;
@@ -126,6 +175,7 @@ header {
   }
   #meniu-top > ul {
     flex-direction: column;
+    gap: 0 !important;
     border-top: 2px solid #555;
   }
   #meniu-top > ul > li {
@@ -158,7 +208,7 @@ header {
   }
   #meniu-top > ul > li:hover > ul {
     display: block;
-    animation: scaleInSub 0.4s ease forwards;
+    animation: scaleInSub 0.4s ease forwards !important;
     transform-origin: top;
   }
   @keyframes scaleInSub {
@@ -171,58 +221,48 @@ header {
   }
   #burger-checkbox:checked ~ #meniu-top {
     display: block;
-    animation: slideDownMenu 0.5s ease-out forwards;
+    animation: slideDownMenu 0.5s ease-out forwards !important;
     transform-origin: top;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(1) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.08s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.08s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(2) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.16s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.16s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(3) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.24s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.24s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(4) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.32s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.32s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(5) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.4s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.4s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(6) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.48s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.48s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(7) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.56s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.56s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(8) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.64s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.64s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(9) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.72s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.72s !important;
   }
   #burger-checkbox:checked ~ #meniu-top > ul > li:nth-child(10) {
-    opacity: 0;
-    animation: fadeInItem 0.4s ease forwards;
-    animation-delay: 0.8s;
+    animation: fadeInItem 0.4s ease both !important;
+    animation-delay: 0.8s !important;
   }
   @keyframes slideDownMenu {
     from {
@@ -243,3 +283,5 @@ header {
     }
   }
 }
+
+/*# sourceMappingURL=meniu.css.map */
