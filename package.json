@@ -1,0 +1,43 @@
+{
+  "name": "artparlor",
+  "version": "1.0.0",
+  "description": "Magazin online de articole artistice",
+  "keywords": [
+    "desen",
+    "pictură",
+    "sculptură",
+    "acuarele",
+    "creioane",
+    "papetărie",
+    "pensule",
+    "paletă",
+    "culori",
+    "cărbune",
+    "grafit",
+    "linere",
+    "markere",
+    "pânză"
+  ],
+  "homepage": "https://github.com/MBica-Alex/ArtParlor#readme",
+  "bugs": {
+    "url": "https://github.com/MBica-Alex/ArtParlor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBica-Alex/ArtParlor.git"
+  },
+  "license": "ISC",
+  "author": "Bica Mihai-Alexandru",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "sass": "^1.99.0",
+    "sharp": "^0.34.5"
+  }
+}
