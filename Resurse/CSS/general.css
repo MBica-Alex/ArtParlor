@@ -664,6 +664,95 @@ main a:not(.taburi-iframe a):active {
     transform: translate(3px, 3px);
 }
 
+::selection {
+    background-color: var(--culoare-principala);
+    color: var(--culoare-fundal);
+}
+
+#evenimente > p {
+    column-count: 2;
+    column-gap: 20px;
+    column-rule: 1px solid var(--culoare-principala);
+}
+@media screen and (max-width: 1200px) {
+    #evenimente > p {
+        column-count: 1;
+        column-rule: none;
+    }
+}
+
+.moving-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--culoare-principala);
+    color: var(--culoare-fundal);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius, 12px);
+}
+.moving-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: moving-text-anim 15s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+@keyframes moving-text-anim {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(230,242,242, 0.9), rgba(230,242,242, 0.9)), url('/Resurse/Imagini/paleta_mica.png');
+    background-size: cover;
+    background-position: center;
+    animation: animate-bg 10s infinite alternate ease-in-out;
+}
+@keyframes animate-bg {
+    0% { background-image: linear-gradient(rgba(230,242,242, 0.9), rgba(230,242,242, 0.9)), url('/Resurse/Imagini/paleta_mica.png'); }
+    100% { background-image: linear-gradient(rgba(200,230,230, 0.8), rgba(200,230,230, 0.8)), url('/Resurse/Imagini/set-creioane.png'); }
+}
+
+@media screen and (max-width: 700px) {
+    table#tab-orar td, table#tab-orar th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    table#tab-orar td::before, table#tab-orar th::before {
+        content: attr(data-th);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table#tab-orar tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        border: 2px solid var(--culoare-principala);
+    }
+    
+    table#tab-orar td[rowspan] {
+        display: none;
+    }
+    
+    table#tab-orar thead {
+        display: none;
+    }
+}
+
 @media print {
 
     @page :left {

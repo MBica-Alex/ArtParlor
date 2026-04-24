@@ -13,6 +13,13 @@
 <body id="top">
     <%- include('../Fragmente/header.ejs') %>
     <main>
+        <div class="alert alert-secondary m-3 text-center" role="alert">
+            Acesta este un mesaj de testare Bootstrap cu tema secundară!
+            <button class="btn btn-primary ms-3">Test Bootstrap Primary</button>
+        </div>
+        <div class="moving-text-container">
+            <p class="moving-text">Promotie speciala - Reduceri masive la toate produsele artistice!</p>
+        </div>
         <div id="grid-pagina">
             <section id="welcome" class="zona1 z-pattern">
                 <hgroup>
@@ -103,57 +110,57 @@
                         </thead>
                         <tbody class="hover-weekdays">
                             <tr>
-                                <td>1</td>
-                                <td rowspan="5">Zile<br />Lucrătoare</td>
-                                <td>Luni</td>
-                                <td>10-12</td>
-                                <td>12-14</td>
-                                <td>14-20</td>
+                                <td data-th="Cod">1</td>
+                                <td rowspan="5" data-th="Tip">Zile<br />Lucrătoare</td>
+                                <td data-th="Zi">Luni</td>
+                                <td data-th="Dimineață">10-12</td>
+                                <td data-th="Pauză">12-14</td>
+                                <td data-th="Seară">14-20</td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>Marți</td>
-                                <td>9-12</td>
-                                <td>12-14</td>
-                                <td>14-21</td>
+                                <td data-th="Cod">2</td>
+                                <td data-th="Zi">Marți</td>
+                                <td data-th="Dimineață">9-12</td>
+                                <td data-th="Pauză">12-14</td>
+                                <td data-th="Seară">14-21</td>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td>Miercuri</td>
-                                <td>9-11</td>
-                                <td>11-13</td>
-                                <td>14-21</td>
+                                <td data-th="Cod">3</td>
+                                <td data-th="Zi">Miercuri</td>
+                                <td data-th="Dimineață">9-11</td>
+                                <td data-th="Pauză">11-13</td>
+                                <td data-th="Seară">14-21</td>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td>Joi</td>
-                                <td>9-11</td>
-                                <td>11-13</td>
-                                <td>14-21</td>
+                                <td data-th="Cod">4</td>
+                                <td data-th="Zi">Joi</td>
+                                <td data-th="Dimineață">9-11</td>
+                                <td data-th="Pauză">11-13</td>
+                                <td data-th="Seară">14-21</td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td>Vineri</td>
-                                <td>9-12</td>
-                                <td>12-14</td>
-                                <td>14-19</td>
+                                <td data-th="Cod">5</td>
+                                <td data-th="Zi">Vineri</td>
+                                <td data-th="Dimineață">9-12</td>
+                                <td data-th="Pauză">12-14</td>
+                                <td data-th="Seară">14-19</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
-                                <td>6</td>
-                                <td rowspan="2">Weekend</td>
-                                <td>Sâmbătă</td>
-                                <td>10-12</td>
-                                <td>12-13</td>
-                                <td>13-16</td>
+                                <td data-th="Cod">6</td>
+                                <td rowspan="2" data-th="Tip">Weekend</td>
+                                <td data-th="Zi">Sâmbătă</td>
+                                <td data-th="Dimineață">10-12</td>
+                                <td data-th="Pauză">12-13</td>
+                                <td data-th="Seară">13-16</td>
                             </tr>
                             <tr>
-                                <td>7</td>
-                                <td>Duminică</td>
-                                <td>10-14</td>
-                                <td>-</td>
-                                <td>închis</td>
+                                <td data-th="Cod">7</td>
+                                <td data-th="Zi">Duminică</td>
+                                <td data-th="Dimineață">10-14</td>
+                                <td data-th="Pauză">-</td>
+                                <td data-th="Seară">închis</td>
                             </tr>
                         </tbody>
                         <tfoot>

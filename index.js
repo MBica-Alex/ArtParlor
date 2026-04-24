@@ -29,6 +29,56 @@ for (let folder of vect_foldere){
 
 app.use("/Resurse", express.static(path.join(__dirname, "Resurse")));
 
+function compileazaScss(caleScss, caleCss) {
+    if(!caleScss) return;
+    let inputPath = path.isAbsolute(caleScss) ? caleScss : path.join(obGlobal.folderScss, caleScss);
+    if (!caleCss) {
+        caleCss = path.basename(caleScss, '.scss') + '.css';
+    }
+    let outputPath = path.isAbsolute(caleCss) ? caleCss : path.join(obGlobal.folderCss, caleCss);
+
+    if (fs.existsSync(outputPath)) {
+        let backupDir = path.join(obGlobal.folderBackup, "resurse", "css");
+        if (!fs.existsSync(backupDir)) {
+            fs.mkdirSync(backupDir, {recursive: true});
+        }
+        let fileName = path.basename(outputPath);
+        let timestamp = new Date().getTime();
+        let nameWithTime = timestamp + "_" + fileName;
+        try {
+            fs.copyFileSync(outputPath, path.join(backupDir, nameWithTime));
+        } catch(err) {
+            console.error("Eroare la salvarea in backup pentru:", fileName, err);
+        }
+    }
+
+    try {
+        let result = sass.compile(inputPath);
+        fs.writeFileSync(outputPath, result.css);
+    } catch(err) {
+        console.error("Eroare la compilare SCSS pentru:", caleScss, err.message);
+    }
+}
+
+if (fs.existsSync(obGlobal.folderScss)) {
+    let fisiere = fs.readdirSync(obGlobal.folderScss);
+    for(let fisier of fisiere) {
+        if (path.extname(fisier) === '.scss') {
+            compileazaScss(fisier);
+        }
+    }
+    fs.watch(obGlobal.folderScss, (eventType, filename) => {
+        if (filename && path.extname(filename) === '.scss') {
+            if (eventType === 'change' || eventType === 'rename') {
+                let inputP = path.join(obGlobal.folderScss, filename);
+                if (fs.existsSync(inputP)) {
+                    compileazaScss(filename);
+                }
+            }
+        }
+    });
+}
+
 app.get("/favicon.ico", function(req, res){
     res.sendFile(path.join(__dirname,"resurse/imagini/favicon/favicon.ico"))
 });
