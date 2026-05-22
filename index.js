@@ -257,7 +257,7 @@ app.get("/produse", function (req, res) {
                         maxPret: maxPret,
                         culoriDinDb: culoriDinDb
                     })
-                }
+                } 
             })
         }
     })

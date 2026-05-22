@@ -24,7 +24,7 @@
 
 #efect-css-duotone:after {
 	background-color: rgb(0, 0, 255);
-	mix-blend-mode: lighten;
+	mix-blend-mode: lighten; 
 }
 
 #efect-css-duotone:before {

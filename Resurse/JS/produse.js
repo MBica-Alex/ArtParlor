@@ -18,7 +18,7 @@ window.onload = function () {
         return matrix[b.length][a.length];
     }
 
-
+ 
     function valideazaFiltre() {
         let isValid = true;
         let inpDescriere = document.getElementById("inp-descriere");

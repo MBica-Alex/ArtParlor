@@ -821,7 +821,7 @@ main a:not(.taburi-iframe a):active {
     }
 }
 
-#efect-css-stilizare-hr {
+#efect-css-stilizare-hr { 
     grid-column: 1 / -1;
     width: 100%;
     height: 30px;
