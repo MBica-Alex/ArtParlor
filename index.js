@@ -3,6 +3,7 @@ const path= require("path");
 const fs= require("fs");
 const sass= require("sass");
 const sharp= require("sharp");
+const pg= require("pg");
 
 app= express();
 app.set("view engine", "ejs")
@@ -18,6 +19,25 @@ obGlobal={
 console.log("Folder index.js", __dirname);
 console.log("Folder curent (de lucru)", process.cwd());
 console.log("Cale fisier", __filename);
+
+client=new pg.Client({
+    database:"cti_2026",
+    user:"mihai",
+    password:"mihai",
+    host:"localhost",
+    port:5432
+})
+
+client.connect()
+
+client.query("select * from prajituri where id>3", function(err, rez){
+    if (err){
+        console.log("Eroare", err)
+    }
+    else {
+        console.log(rez)
+    }
+})
 
 let vect_foldere=[ "temp", "logs", "backup", "fisiere_uploadate" ]
 for (let folder of vect_foldere){
@@ -41,6 +61,44 @@ app.get(["/", "/index", "/home"], function(req, res){
     });
 });
 
+app.get("/produse", function(req, res){
+    let clauzaWhere=""
+    if (req.query.tip)
+        clauzaWhere=`where tip_produs='${req.query.tip}'`
+    client.query(`select * from prajituri ${clauzaWhere}`, function(err, rez){
+    if (err){
+        console.log("Eroare", err)
+        afisareEroare(res,2)
+    }
+    else {
+        res.render("pagini/produse", {
+            produse:rez.rows,
+            optiuni:[]
+        })
+    }
+})
+})
+
+app.get("/produs/:id", function(req, res){
+
+    client.query(`select * from prajituri where id=${req.params.id}`, function(err, rez){
+    if (err){
+        console.log("Eroare", err)
+        afisareEroare(res,2)
+    }
+    else {
+        if(rez.rowCount==0){
+            afisareEroare(res, 404, "Produs inexistent")
+        }
+        else{
+                res.render("pagini/produs", {
+                prod:rez.rows[0],
+                optiuni:[]
+            })
+        }
+    }
+})
+})
 
 app.get("/cale", function(req, res){
     console.log("Am primit o cerere GET pe /cale");

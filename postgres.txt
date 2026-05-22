@@ -1,0 +1,2 @@
+user: postgres
+parola: 123456

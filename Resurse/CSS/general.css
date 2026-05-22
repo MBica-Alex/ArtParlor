@@ -664,6 +664,10 @@ main a:not(.taburi-iframe a):active {
     transform: translate(3px, 3px);
 }
 
+#banner-scolar {
+    display: none;
+}
+
 @media print {
 
     @page :left {
@@ -680,9 +684,8 @@ main a:not(.taburi-iframe a):active {
         position: relative;
     }
 
-
     #banner-scolar {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 10%;
         width: 80%;
@@ -691,8 +694,9 @@ main a:not(.taburi-iframe a):active {
         display: block !important;
         box-sizing: border-box;
         padding: 10px;
+        background: white;
+        z-index: 10000;
     }
-
 
     img,
     picture,
@@ -707,22 +711,23 @@ main a:not(.taburi-iframe a):active {
     figure,
     figcaption,
     #dv-prezentare,
+    #dv-prezentare-1,
     #grid-galerie,
-    #link-top {
+    #link-top,
+    .container-iframe,
+    #sectiune-video-vtt {
         display: none !important;
     }
-
 
     #grid-pagina {
         display: block !important;
     }
 
-    #grid-pagina>* {
+    #grid-pagina > * {
         page-break-inside: avoid;
         break-inside: avoid;
         margin-bottom: 20px;
     }
-
 
     a,
     a:link,
@@ -731,10 +736,20 @@ main a:not(.taburi-iframe a):active {
     a:active {
         text-decoration: none !important;
         color: black !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+        transform: none !important;
     }
 
+    a::before,
+    a::after {
+        display: none !important;
+    }
 
-    header nav {
+    header nav,
+    #burger-meniu,
+    #burger-checkbox {
         display: none !important;
     }
 
@@ -746,7 +761,6 @@ main a:not(.taburi-iframe a):active {
         align-items: center;
         break-after: page;
         page-break-after: always;
-
         margin: 0 !important;
         padding: 0 !important;
         border: none !important;
@@ -754,8 +768,11 @@ main a:not(.taburi-iframe a):active {
         background: transparent !important;
     }
 
-    header h1 {
+    header img {
+        display: none !important;
+    }
 
+    header h1 {
         font-size: 2.5rem !important;
         text-decoration: underline !important;
         color: black !important;
@@ -763,11 +780,9 @@ main a:not(.taburi-iframe a):active {
         margin: 0 !important;
     }
 
-
     header h1 i {
         display: none !important;
     }
-
 
     footer {
         break-before: page;
@@ -777,7 +792,6 @@ main a:not(.taburi-iframe a):active {
         border: none !important;
         box-shadow: none !important;
     }
-
 
     body::after {
         content: "Bica Mihai-Alexandru";
