@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html  lang="ro">
-    <head>
-        <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
-        <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse,<%- locals.prod.nume %>">
-        
-        <title>Cofetăria Dulcelind - <%- locals.prod.nume %></title>
-        <%- include("../fragmente/head") %>     
-        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
-    </head>
+<html lang="ro">
 
-        <%- include("../fragmente/header") %>
+<head>
+    <meta name="description" content="ArtParlor ofera picturi, sculpturi si arta pentru pasionati.">
+    <meta name="keywords" content="artparlor, arta, picturi, sculpturi,<%- locals.prod.nume %>">
+
+    <title>ArtParlor - <%- locals.prod.nume %></title>
+    <%- include("../fragmente/head") %>
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+</head>
+
+<%- include("../fragmente/header") %>
     <main>
         <section>
             <h2>Pagină produs</h2>
-                <article id="art-produs">
-                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
-                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
-                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
-                    <p>Ingrediente: <span class="ingrediente"><%- locals.prod.ingrediente %> </span></p>
-                    <p>Calorii: <span class="calorii"><%- locals.prod.calorii %> </span></p>
-                    <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
-                    <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
-                    <p>Pentru diabetici: <span class="pt_diabetici"><%- locals.prod.pt_diabetici %> </span></p>
-                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+            <article id="art-produs">
+                <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                <% function formateazaString(cat) { const dictionar={ 'pentru_incepatori' : 'Pentru începători'
+                    , 'profesional' : 'Profesional' , 'hobby' : 'Hobby' , 'pentru_copii' : 'Pentru copii'
+                    , 'editie_limitata' : 'Ediție limitată' , 'set_complet' : 'Set complet' , 'pictura' : 'Pictură'
+                    , 'desen' : 'Desen' , 'sculptura' : 'Sculptură' }; return dictionar[cat] || cat; } function
+                    formateazaData(data) { if (!data) return '' ; let d=new Date(data); if (isNaN(d.getTime()))
+                    return '' ; let zile=['Duminică', 'Luni' , 'Marți' , 'Miercuri' , 'Joi' , 'Vineri' , 'Sâmbătă' ];
+                    let luni=['Ianuarie', 'Februarie' , 'Martie' , 'Aprilie' , 'Mai' , 'Iunie' , 'Iulie' , 'August'
+                    , 'Septembrie' , 'Octombrie' , 'Noiembrie' , 'Decembrie' ]; return d.getDate() + ' ' +
+                    luni[d.getMonth()] + ' ' + d.getFullYear() + ' [' + zile[d.getDay()] + ']' ; } %>
+                    <p>Tip produs: <span class="tip_produs"><%- formateazaString(locals.prod.tip_produs) %> </span></p>
+                    <p>Categorie: <span class="categorie"><%- formateazaString(locals.prod.categorie) %> </span></p>
+                    <p>Greutate: <span class="greutate"><%- locals.prod.greutate %>g </span></p>
+                    <p>Culoare: <span class="culoare"><%- locals.prod.culoare %> </span></p>
+                    <p>Materiale: <span class="materiale"><%- locals.prod.materiale %> </span></p>
+                    <p>Sigur pentru copii: <span class="sigur_pentru_copii"><%- locals.prod.sigur_pentru_copii ? 'Da'
+                                : 'Nu' %> </span></p>
+                    <p>Data adăugare: <span class="data_adaugare"><%- formateazaData(locals.prod.data_adaugare) %>
+                        </span></p>
                     <figure class="imag-produs">
-                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
-                    </figure>    
-                </article>
-            
+                        <img src="/resurse/imagini/produse/<%- locals.prod.imagine %>"
+                            alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>
+            </article>
+
         </section>
     </main>
 
     <%- include("../fragmente/footer") %>
-    </body>
+        </body>
+
 </html>

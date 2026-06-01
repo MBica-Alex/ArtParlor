@@ -29,7 +29,9 @@ body {
 header,
 footer,
 #grid-pagina>section,
-#grid-pagina>div {
+#grid-pagina>div,
+main>.container,
+main>#produse {
 
     background-color: #ffffff;
     border: 2px solid var(--culoare-border);
@@ -570,6 +572,10 @@ table#tab-orar td:first-child {
 
     width: 150px;
     height: 50px;
+    line-height: 1.1;
+    white-space: normal;
+    padding: 2px;
+    font-size: 0.65rem;
 
     background-color: #ffffff;
     color: var(--culoare-text);
@@ -624,13 +630,14 @@ a:visited {
     color: var(--culoare-highlight);
 }
 
-header a:visited, footer a:visited {
+header a:visited,
+footer a:visited {
     color: var(--culoare-fundal);
 }
 
 a[href^="http"]::before {
     content: "⮳";
-    font-size: 1.5em; 
+    font-size: 1.5em;
     margin-right: 5px;
     display: inline-block;
     vertical-align: middle;
@@ -647,7 +654,7 @@ main a:not(.taburi-iframe a) {
     background-size: 0% 0%;
     background-repeat: no-repeat;
     transition: background-size 0.8s ease-out, transform 0.1s ease, border 0.1s ease;
-    
+
     border: 2px solid transparent;
     border-radius: 4px;
     padding: 2px 6px;
@@ -723,7 +730,7 @@ main a:not(.taburi-iframe a):active {
         display: block !important;
     }
 
-    #grid-pagina > * {
+    #grid-pagina>* {
         page-break-inside: avoid;
         break-inside: avoid;
         margin-bottom: 20px;
@@ -812,4 +819,108 @@ main a:not(.taburi-iframe a):active {
         background: transparent;
         pointer-events: none;
     }
+}
+
+#efect-css-stilizare-hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-image:
+        linear-gradient(to right, transparent 0%, transparent 10%, var(--culoare-border) 10%, var(--culoare-border) 70%, transparent 70%, transparent 100%),
+        linear-gradient(to right, transparent 0%, transparent 20%, var(--culoare-highlight) 20%, var(--culoare-highlight) 80%, transparent 80%, transparent 100%),
+        linear-gradient(to right, var(--culoare-text) 0%, var(--culoare-text) 60%, transparent 60%, transparent 100%);
+    background-size: 60px 33.33%, 60px 33.33%, 60px 33.33%;
+    background-position: top left, center left, bottom left;
+    background-repeat: repeat-x;
+    margin: 40px 0;
+}
+
+#theme-selector-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+#select-tema {
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    border: 2px solid var(--culoare-principala);
+    border-radius: 8px;
+    padding: 6px 35px 6px 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body.dark {
+    --culoare-fundal: #1a1a1a;
+    --culoare-text: #f0f0f0;
+    --culoare-border: #66b2b2;
+    --produs-bg: #2d2d2d;
+    --info-prod-bg: #3d3d3d;
+    --culoare-text-eticheta: #ffb3b3;
+    --culoare-sectiune: #2d2d2d;
+}
+
+body.nature {
+    --culoare-fundal: #c8e6c9;
+    --culoare-text: #003300;
+    --culoare-border: #4caf50;
+    --produs-bg: #aed581;
+    --info-prod-bg: #81c784;
+    --culoare-text-eticheta: #002200;
+    --culoare-sectiune: #aed581;
+}
+
+body.dark #grid-pagina>section,
+body.dark #grid-pagina>div,
+body.dark main>.container,
+body.dark main>#produse,
+body.nature #grid-pagina>section,
+body.nature #grid-pagina>div,
+body.nature main>.container,
+body.nature main>#produse {
+    background-color: var(--culoare-sectiune);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+}
+
+body.dark table#tab-orar td[rowspan],
+body.dark table#tab-orar td:first-child,
+body.nature table#tab-orar td[rowspan],
+body.nature table#tab-orar td:first-child {
+    background-color: var(--culoare-sectiune) !important;
+}
+
+body.dark header nav>ul>li>ul,
+body.dark .taburi-iframe a,
+body.dark .container-iframe iframe,
+body.nature header nav>ul>li>ul,
+body.nature .taburi-iframe a,
+body.nature .container-iframe iframe {
+    background-color: var(--culoare-sectiune);
+}
+
+body.dark .produs,
+body.nature .produs {
+    background-color: var(--produs-bg) !important;
+    color: var(--culoare-text) !important;
+}
+
+body.dark .form-control,
+body.dark .form-select {
+    border: 2px solid #888888 !important;
+    background-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+body.nature .form-control,
+body.nature .form-select {
+    border: 2px solid #81c784 !important;
+    background-color: #e8f5e9 !important;
+    color: #1b5e20 !important;
 }

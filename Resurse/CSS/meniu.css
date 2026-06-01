@@ -210,7 +210,10 @@ header {
   #meniu-top > ul {
     flex-direction: column;
     gap: 0 !important;
-    border-top: 2px solid #555;
+    border-top: 2px solid var(--meniu-text-hover);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -4px 15px rgba(0, 255, 229, 0.3);
+    overflow: hidden;
   }
   #meniu-top > ul > li {
     width: 100%;
@@ -321,5 +324,3 @@ header {
     }
   }
 }
-
-/*# sourceMappingURL=meniu.css.map */

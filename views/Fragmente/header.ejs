@@ -1,4 +1,5 @@
 <header>
+    <script src="/Resurse/JS/tema.js"></script>
     <h1><i class="fa-solid fa-palette"></i> ArtParlor</h1>
     <img src="/Resurse/Imagini/sigla.png" alt="sigla ArtParlor" style="width:150px;" />
     <input type="checkbox" id="burger-checkbox">
@@ -21,10 +22,11 @@
                         class="nav-text">Produse</span></a>
                 <ul>
                     <li><a href="/produse">Toate</a></li>
-                    <li><a href="/produse?tip=cofetarie">Pictură</a></li>
-                    <li><a href="/produse?tip=patiserie">Desen</a></li>
-                    <li><a href="/produse?tip=gelaterie">Sculptură</a></li>
-
+                    <% for(let opt of (locals.optiuni_meniu || [])) { %>
+                        <li><a href="/produse?tip=<%- opt.unnest %>"><%- opt.unnest.charAt(0).toUpperCase() +
+                                    opt.unnest.slice(1) %></a></li>
+                        <% } %>
+                            <li><a href="/galerie">Galerie Statică</a></li>
                 </ul>
             </li>
 
@@ -39,4 +41,11 @@
             </li>
         </ul>
     </nav>
+    <div id="theme-selector-container">
+        <select id="select-tema" class="form-select form-select-sm shadow-sm" aria-label="Selectează tema">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="nature">Nature</option>
+        </select>
+    </div>
 </header>

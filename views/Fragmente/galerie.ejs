@@ -1,0 +1,23 @@
+<div id="grid-galerie">
+    <% let indexZile={"luni": 1, "marti" : 2, "miercuri" : 3, "joi" : 4, "vineri" : 5, "sambata" : 6, "duminica" : 7};
+        let ziuaCurentaIdx=new Date().getDay(); if (ziuaCurentaIdx===0) ziuaCurentaIdx=7; let
+        imaginiDeAfisat=locals.imagini.filter(imag=> {
+        if (!imag.intervale_zile) return false;
+        for (let interval of imag.intervale_zile) {
+        let start = indexZile[interval[0]];
+        let end = indexZile[interval[1]];
+        if (start <= end && ziuaCurentaIdx>= start && ziuaCurentaIdx <= end) return true; if (start> end &&
+                (ziuaCurentaIdx >= start || ziuaCurentaIdx <= end)) return true; } return false; });
+                    imaginiDeAfisat.length=imaginiDeAfisat.length - (imaginiDeAfisat.length % 2); for (let imag of
+                    imaginiDeAfisat) { %>
+                    <figure>
+                        <picture>
+                            <source srcset="<%- imag.fisier_mediu %>" media="screen and (max-width:1100px)">
+                            <img src="<%- imag.fisier_imagine %>"
+                                alt="<%- imag.continut_alternativ || imag.nume_poza %>"
+                                title="<%- imag.descriere_poza || imag.nume_poza %>">
+                            <figcaption><%- imag.nume_poza %></figcaption>
+                        </picture>
+                    </figure>
+                    <% } %>
+</div>

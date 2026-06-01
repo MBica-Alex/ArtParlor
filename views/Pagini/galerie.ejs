@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>ArtParlor - Galerie</title>
+    <meta name="description" content="Galeria de produse ArtParlor.">
+    <meta name="keywords" content="galerie, produse, artparlor, imagini">
+    <%- include('../Fragmente/head.ejs') %>
+</head>
+
+<body id="top">
+    <%- include('../Fragmente/header.ejs') %>
+        <main>
+            <div id="grid-pagina" style="padding: 20px;">
+                <section id="galerie-dedicata" style="grid-column: 1 / -1;">
+                    <h1 style="text-align: center; margin-bottom: 30px;">Galeria Noastră</h1>
+                    <p style="text-align: center; margin-bottom: 20px;">Aici puteți admira selecția noastră de produse
+                        artistice, disponibile pentru dumneavoastră.</p>
+                    <%- include('../Fragmente/galerie.ejs') %>
+                </section>
+            </div>
+        </main>
+        <%- include('../Fragmente/footer.ejs') %>
+</body>
+
+</html>

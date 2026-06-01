@@ -1,0 +1,184 @@
+{
+	"cale_galerie": "resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier_imagine": "set-pensule.png",
+			"nume_poza": "Set de Pensule",
+			"continut_alternativ": "Set de pensule profesionale pentru pictură",
+			"intervale_zile": [
+				[
+					"luni",
+					"miercuri"
+				],
+				[
+					"sambata",
+					"sambata"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Set de Pensule"
+		},
+		{
+			"fisier_imagine": "culori-acrilice.png",
+			"nume_poza": "Culori Acrilice",
+			"continut_alternativ": "Tuburi de culori acrilice vibrante",
+			"intervale_zile": [
+				[
+					"marti",
+					"vineri"
+				]
+			],
+			"licenta": "CC-BY",
+			"autor": "ArtParlor",
+			"link_autor": "https://artparlor.ro",
+			"descriere_poza": "Descriere interesantă pentru Culori Acrilice"
+		},
+		{
+			"fisier_imagine": "sevalet.png",
+			"nume_poza": "Șevalet Studio",
+			"continut_alternativ": "Șevalet din lemn masiv pentru studio",
+			"intervale_zile": [
+				[
+					"joi",
+					"duminica"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Șevalet Studio"
+		},
+		{
+			"fisier_imagine": "paleta.png",
+			"nume_poza": "Paletă Pictură",
+			"continut_alternativ": "Paletă din lemn pentru amestecarea culorilor",
+			"intervale_zile": [
+				[
+					"luni",
+					"joi"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Paletă Pictură"
+		},
+		{
+			"fisier_imagine": "creioane-grafit.png",
+			"nume_poza": "Creioane Grafit",
+			"continut_alternativ": "Set de creioane grafit diverse durități",
+			"intervale_zile": [
+				[
+					"vineri",
+					"duminica"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Creioane Grafit"
+		},
+		{
+			"fisier_imagine": "bloc-desen.png",
+			"nume_poza": "Bloc de Desen",
+			"continut_alternativ": "Bloc de desen A4 cu hârtie texturată",
+			"intervale_zile": [
+				[
+					"sambata",
+					"luni"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Bloc de Desen"
+		},
+		{
+			"fisier_imagine": "culori-ulei.png",
+			"nume_poza": "Culori Ulei",
+			"continut_alternativ": "Set de culori de ulei premium",
+			"intervale_zile": [
+				[
+					"miercuri",
+					"miercuri"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Culori Ulei"
+		},
+		{
+			"fisier_imagine": "panza-sasiu.png",
+			"nume_poza": "Pânză pe Șasiu",
+			"continut_alternativ": "Pânză de bumbac tratată pentru pictură",
+			"intervale_zile": [
+				[
+					"luni",
+					"miercuri"
+				],
+				[
+					"sambata",
+					"sambata"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Pânză pe Șasiu"
+		},
+		{
+			"fisier_imagine": "markere.png",
+			"nume_poza": "Markere pe Alcool",
+			"continut_alternativ": "Set de markere profesionale pe bază de alcool",
+			"intervale_zile": [
+				[
+					"marti",
+					"vineri"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Markere pe Alcool"
+		},
+		{
+			"fisier_imagine": "argila.png",
+			"nume_poza": "Argilă Modelaj",
+			"continut_alternativ": "Argilă naturală pentru sculptură și modelaj",
+			"intervale_zile": [
+				[
+					"joi",
+					"duminica"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Argilă Modelaj"
+		},
+		{
+			"fisier_imagine": "trusa-acuarele.png",
+			"nume_poza": "Trusă Acuarele",
+			"continut_alternativ": "Trusă de acuarele fine cu 24 de culori",
+			"intervale_zile": [
+				[
+					"luni",
+					"joi"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Trusă Acuarele"
+		},
+		{
+			"fisier_imagine": "cutite-paleta.png",
+			"nume_poza": "Cuțite de Paletă",
+			"continut_alternativ": "Set de cuțite speciale pentru texturi",
+			"intervale_zile": [
+				[
+					"vineri",
+					"duminica"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Cuțite de Paletă"
+		},
+		{
+			"fisier_imagine": "linere.png",
+			"nume_poza": "Set Linere",
+			"continut_alternativ": "Linere negre cu diferite grosimi pentru contur",
+			"intervale_zile": [
+				[
+					"sambata",
+					"luni"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Set Linere"
+		},
+		{
+			"fisier_imagine": "radiera.png",
+			"nume_poza": "Radieră Maleabilă",
+			"continut_alternativ": "Radieră moale specială pentru cărbune și grafit",
+			"intervale_zile": [
+				[
+					"miercuri",
+					"miercuri"
+				]
+			],
+			"descriere_poza": "Descriere interesantă pentru Radieră Maleabilă"
+		}
+	]
+}

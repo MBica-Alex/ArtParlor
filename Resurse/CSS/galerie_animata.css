@@ -1,0 +1,153 @@
+@media screen and (max-width: 1200px) {
+  #galerie-animata {
+    display: none !important;
+  }
+}
+#galerie-animata {
+  padding: 15px;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#galerie-animata h2 {
+  margin-bottom: 20px;
+}
+
+#container_animatie {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border: 15px solid transparent;
+  border-image: url("/Resurse/Imagini/rama.png") 30 stretch;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#galerie-animata figure {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+  animation: slideExit 48s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#galerie-animata img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#galerie-animata figcaption {
+  font-weight: bold;
+  color: #004D4D;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+#container_animatie:hover figure {
+  animation-play-state: paused;
+}
+
+#galerie-animata figure:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#galerie-animata figure:nth-child(2) {
+  animation-delay: 4s;
+}
+
+#galerie-animata figure:nth-child(3) {
+  animation-delay: 8s;
+}
+
+#galerie-animata figure:nth-child(4) {
+  animation-delay: 12s;
+}
+
+#galerie-animata figure:nth-child(5) {
+  animation-delay: 16s;
+}
+
+#galerie-animata figure:nth-child(6) {
+  animation-delay: 20s;
+}
+
+#galerie-animata figure:nth-child(7) {
+  animation-delay: 24s;
+}
+
+#galerie-animata figure:nth-child(8) {
+  animation-delay: 28s;
+}
+
+#galerie-animata figure:nth-child(9) {
+  animation-delay: 32s;
+}
+
+#galerie-animata figure:nth-child(10) {
+  animation-delay: 36s;
+}
+
+#galerie-animata figure:nth-child(11) {
+  animation-delay: 40s;
+}
+
+#galerie-animata figure:nth-child(12) {
+  animation-delay: 44s;
+}
+
+@keyframes slideExit {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 10;
+  }
+  3.75% {
+    transform: translateX(-50%);
+    opacity: 1;
+    z-index: 10;
+  }
+  6.25% {
+    transform: translateX(-20%);
+    opacity: 0.8;
+    z-index: 10;
+  }
+  8.3333333333% {
+    transform: translateX(-80%);
+    opacity: 0.5;
+    z-index: 10;
+  }
+  12.0833333333% {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 10;
+  }
+  12.1833333333% {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+  }
+}

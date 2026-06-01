@@ -1,0 +1,72 @@
+$primary: #008080;
+$secondary: #FF7F50;
+
+$body-color: #004D4D;
+$body-bg: #E6F2F2;
+$btn-color: #ffffff;
+
+$link-color: #008080;
+$link-decoration: none;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 700px,
+  lg: 1200px,
+  xl: 1400px,
+  xxl: 1600px
+);
+
+$border-radius: 12px;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+
+$font-family-base: "Akaya Telivigala", system-ui, sans-serif;
+$font-family-sans-serif: "Akaya Telivigala", system-ui, sans-serif;
+
+$btn-border-radius: 10px;
+$btn-border-width: 2px;
+
+$form-range-thumb-width: 1.5rem;
+$form-range-thumb-height: 1.5rem;
+$form-range-thumb-bg: $primary;
+$form-range-track-bg: #ccc;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --produs-bg: #ffffff;
+  --info-prod-bg: #d1e0e0;
+  --culoare-text-eticheta: #b30000;
+}
+
+.produs .info-prod,
+.produs .produs-col2 {
+  background-color: var(--info-prod-bg);
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.btn-primary i,
+.btn-secondary i,
+.btn-success i {
+  color: #ffffff !important;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid $primary !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+* {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.label-caracteristica {
+  font-weight: bold;
+  color: var(--culoare-text-eticheta);
+}

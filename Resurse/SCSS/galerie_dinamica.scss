@@ -1,0 +1,124 @@
+@use "sass:math";
+$nr-imagini: 6 !default;
+$durata-pe-imagine: 4s;
+$total-durata: $nr-imagini * $durata-pe-imagine;
+
+#galerie-dinamica {
+    @media screen and (max-width: 1200px) {
+        display: none !important;
+    }
+
+    padding: 15px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#galerie-dinamica h2 {
+    margin-bottom: 20px;
+}
+
+#container_animatie {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: 15px solid transparent;
+    border-image: url("/Resurse/Imagini/rama.png") 30 stretch;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+#galerie-dinamica figure {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    animation: slideExit #{$total-durata} linear infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#galerie-dinamica img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#galerie-dinamica figcaption {
+    font-weight: bold;
+    color: #004D4D;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+#container_animatie:hover figure {
+    animation-play-state: paused;
+}
+
+@for $i from 1 through $nr-imagini {
+    #galerie-dinamica figure:nth-child(#{$i}) {
+        animation-delay: ($i - 1) * $durata-pe-imagine;
+    }
+}
+
+$procent-activ: math.div(100, $nr-imagini);
+$fade-in-pct: $procent-activ * 0.45;
+
+@keyframes slideExit {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+        z-index: 10;
+    }
+
+    #{$fade-in-pct}% {
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 10;
+    }
+
+    #{$procent-activ * 0.75}% {
+        transform: translateX(-20%);
+        opacity: 0.8;
+        z-index: 10;
+    }
+
+    #{$procent-activ}% {
+        transform: translateX(-80%);
+        opacity: 0.5;
+        z-index: 10;
+    }
+
+    #{$procent-activ + $fade-in-pct}% {
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: 10;
+    }
+
+    #{$procent-activ + $fade-in-pct + 0.1}% {
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: -1;
+    }
+}
